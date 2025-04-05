@@ -1,5 +1,6 @@
 import random
 import time
+import string
 
 simbol = '+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 
@@ -12,7 +13,7 @@ password = ""
 
 
 for i in range(zapros):
-    password += random.choice(simbol)
+    password += random.choice(string.printable)
     
 time.sleep(2)
 print("Сгенерированный пароль:", password)
